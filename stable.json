@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "notes": "### 先看这一条：要配升级过的挖掘机\n\n- 这一版换了和挖掘机通信的方式，**只能连已经升级过的挖掘机**，没升级的连不上。连之前先问维护者，要连的挖掘机升级了没有。\n- 以前装的 0.1.0 测试版没有自动更新，这一次要**手动下载安装**（方法见使用说明）。不用先卸载，接入包和连接配置都会保留。\n- 从这一版起，以后出了新版本，在\"**设置 › 关于与诊断 › 软件更新**\"里点一下就能更新。连着挖掘机时不能更新，要先断开。\n\n### 驾驶页换了样子\n\n- 画面占了屏幕的大部分。驾驶要看的东西都在驾驶页上：画面、8 路动作条、机器姿态、控制状态、链路、画面质量和软件停止。\n- **8 路动作条**：粗的实条是这台电脑发出的指令，细线是挖掘机实际执行的。两者对不上时，多半是挖掘机在暂停、在三缸模式，或者在限幅。\n- **开始驾驶**：先回中，再按手柄 **A**（三缸：只动动臂、斗杆、铲斗）或 **Y**（全控）。用键盘时按 **Ctrl+空格**。按下后要等挖掘机回应，等不到会提示\"**使能未送达，请重按**\"。\n- **软件停止**：手柄 **B**，键盘 **Esc** 或**空格**。这几个键任何键位方案都改不掉。\n- 连接、断开、音量、键位都挪到了设置页。\n\n### 新的设置页\n\n- 驾驶页上点\"**设置**\"打开。正在驾驶时要按两次：客户端会先软件停止，再打开设置。回来以后要回中、重新按 A 或 Y。\n- 分六块：键位与输入、画面、链路与重连、告警与声音、会话与事件、关于与诊断。怎么用见使用说明里的\"设置页怎么用\"。\n- **键位可以自己改**，改好可以导出，拷到别的驾驶舱导入。默认键位和挖掘机旁边的本地手柄、键盘一样。改键位时，右边的测试区会显示每个键、每根摇杆实际会发出什么，但不会发给挖掘机。\n- 手柄上的按键可以设成驱动某一路，比如推土铲。默认不绑，所以默认情况下手柄动不了推土铲和属具。\n\n### 画面和网络出问题时\n\n- **画面卡住不再遮住画面**：最后一帧留在屏幕上，画面边框和标题会提示冻结。\n- 主画面冻结只提示，挖掘机照常跟着摇杆动；**冻结满 3 秒，客户端停发，挖掘机锁定**。这个时长在\"设置 › 画面\"里能改，也能关掉，但关掉后看不到画面时挖掘机照样会动，不建议关。\n- **网络断一下，挖掘机自己会暂停**：很短的中断，网络一恢复就接着动；断得稍久，要先回中再继续；断得太久会锁定，要重新按 A 或 Y。驾驶页会写明现在是暂停还是锁定，还剩多久锁定。\n- 网络不好时，驾驶页会建议把\"新鲜度时限\"调大。客户端不会自己改，要你到\"设置 › 链路与重连\"里点\"用建议值\"。\n\n### 要注意\n\n- **第一次用这一版开有动力的挖掘机之前**，要按维护者给的步骤，在低压下一个动作一个动作地确认方向对不对。改过键位的电脑，每次改完都要这样确认一遍。\n- **Windows 上的键盘驾驶还没在真机上测过**，测过之前不要在 Windows 上用键盘开动挖掘机。\n- Ubuntu 上开有动力的挖掘机只用有线手柄。蓝牙手柄只用在不带动力的测试里。",
+  "pub_date": "2026-11-23T16:41:52Z",
+  "platforms": {
+    "windows-x86_64-nsis": {
+      "url": "https://github.com/XiaoMingAXX/kaiwu-weiwo-releases/releases/download/v0.2.0/kaiwu-weiwo_0.2.0_windows_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTVFZGdUZ1VE5EZGEwTm5iU1FrZ2YzSEVDejRxcGdhMUIvVUVTYVRXR205VjV6Nlh0UDV3QmtOM2Mwek5TWFV2cjVua1VEZHhwbXBSNjFrYTVuMzFOR2JDbjhCVS9PaUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NDUyMDU5CWZpbGU6a2Fpd3Utd2Vpd29fMC4yLjBfd2luZG93c194NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjAKSzI3T3ZORm5vSlZvSUROUExnbmIrYVdlK0UvWVF4TWhISm9WQW5Mcnlwdk5TNkFGR09YVlF6Q24wa0JNNTAxT1ZJYkF3VlVpckZNZjE4bGtocGtIQnc9PQo="
+    },
+    "linux-x86_64-deb": {
+      "url": "https://github.com/XiaoMingAXX/kaiwu-weiwo-releases/releases/download/v0.2.0/kaiwu-weiwo_0.2.0_linux_amd64.deb",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTVFZGdUZ1VE5EZFIzYnBHaWZNT0Q2eDVGM3d6aS9HaVRGUmpSRG1OeHBsNFlqMU1HaSs1L1g3V0dFTTAxSmhKU1pqQko0R3R0UWtlcnU1S1BDQlA3RTMvL05Pa09Ramd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NDUyMDU4CWZpbGU6a2Fpd3Utd2Vpd29fMC4yLjBfbGludXhfYW1kNjQuZGViCXZlcnNpb246MC4yLjAKdGRPL0tLV045M3QrRmtuS0gwdlJ4V2hZb2JMS25iM2pOdG8xMFh6UGtjVlhZbUNKbW9iaTRvaXVsRkVHbDd2RE9ISlRISkZwNm5sZ29pbFh1MElaQlE9PQo="
+    }
+  },
+  "weiwo": {
+    "machineProtocols": [
+      2
+    ]
+  }
+}
